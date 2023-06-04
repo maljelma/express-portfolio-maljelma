@@ -1,0 +1,23 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+<!-- Main Content -->
+<main class="container p-5 mt-3">
+  <div class="jumbotron">
+    <% if (title == "Home") { %>
+      <%_ include pages/home %>
+    <% } %>
+    <% if (title == "About") { %>
+      <%_ include pages/about %>
+    <% } %>
+    <% if (title == "Projects") { %>
+      <%_ include pages/projects %>
+    <% } %>
+    <% if (title == "Services") { %>
+      <%_ include pages/services %>
+    <% } %>
+  </div>
+</main>
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
