@@ -36,4 +36,16 @@
     "@types/passport-local": "^1.0.35",
     "@types/passport-local-mongoose": "^6.1.1"
   },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maljelma/express-portfolio-maljelma.git"
+  },
+  "author": "mohammad aljelmawi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maljelma/express-portfolio-maljelma/issues"
+  },
+  "homepage": "https://github.com/maljelma/express-portfolio-maljelma#readme",
+  "description": ""
 }
