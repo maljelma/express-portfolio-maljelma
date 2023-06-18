@@ -1,3 +1,6 @@
+/* server.models.user.js - Mohammad Aljelmawi 301-268-246 comp229 s23 18-jun-2023 */ 
+
+
 // require modules for the User Model
 let mongoose = require('mongoose');
 let passportlocalMongoose = require('passport-local-mongoose');
