@@ -1,0 +1,95 @@
+<!-- Main Navigation -->
+  <!-- style as: navbar-dark bg-dark -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+      <!-- home icon -->
+      <!-- home icon -->
+      <a class="navbar-brand" href="/">
+        <img src="/Assets/images/MA.png" alt="" class="img-fluid" width="50px">
+        COMP229
+      </a>
+      <% if(typeof displayname == 'string' && displayname) {%>
+        <li class="navbar-text"> <i class= "fas fa-lg fa-user"></i> Welcome, <%= displayname %></li>
+      <% } %>
+      <!-- small screens menu button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Buttons Frame -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- home -->
+          <% if (title == "Home") { %> <!-- set home to active when ejs title is "Home" -->
+          <li class="nav-item active">
+          <% } else { %> <!-- OR set home to unactive when ejs title is anything else -->
+          <li class="nav-item">
+          <% } %>
+
+            <a class="nav-link" href="/home"><i class="fa-solid fa-house"></i> Home </a>
+          </li>
+
+          <!-- about -->
+          <% if (title == "About") { %>
+          <li class="nav-item active">
+          <% } else { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/about"><i class="fa-solid fa-circle-info"></i> About </a>
+          </li>
+
+          <!-- projects -->
+          <% if (title == "Projects") { %>
+          <li class="nav-item active">
+          <% } else { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/projects"><i class="fa-solid fa-wand-magic-sparkles"></i> Projects </a>
+          </li>
+
+          <!-- services -->
+          <% if (title == "Services") { %>
+          <li class="nav-item active">
+          <% } else { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/services"><i class="fa-solid fa-screwdriver-wrench"></i> Services </a>
+          </li>
+
+          <!-- contacts -->
+          <% if (title == "Contacts") { %>
+            <li class="nav-item active">
+            <% } else { %>
+            <li class="nav-item">
+            <% } %>
+              <a class="nav-link" href="/contact-list"><i class="fa-solid fa-book"></i> Contacts </a>
+            </li>
+          
+          <!-- contact -->
+          <% if (title == "Contact") { %>
+          <li class="nav-item active">
+          <% } else { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/contact"><i class="fa-solid fa-phone"></i> Contact </a>
+          </li>
+
+          <!-- login & logout -->
+          <% if(typeof displayname == 'string' && displayname) {%>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
+          <% } else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+          <% } %>
+      </div>
+    </div>
+  </nav>
+  <div class="mx-auto" style="height: 60px;"></div>

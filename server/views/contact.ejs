@@ -1,0 +1,50 @@
+<!-- contact page main content -->
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav_contact.ejs %>
+
+  <!-- Main Content -->
+<main>
+    <div class="cont-trans-h3"></div>
+    <div class="cont-rounded">
+    <strong>Contact Form</strong>
+    </div>
+    <div class="cont-rounded">
+        <form action="/home" method="POST" name="Main-Form">
+            
+            <!--CONTACT INFO -->
+            <div class="text-pt-14">Your Contact Info</div>
+            <br>
+
+            <p class="float-left width-px-160 text-align-left "> First Name </p>
+            <input type="text" name="firstname" class="rounded" placeholder="First Name">
+            <hr class="trans">
+            <p class="float-left width-px-160 text-align-left "> Last Name </p>
+            <input type="text" name="lastname" class="rounded" placeholder="Last Name">
+            <br>
+            <hr>
+            <p class="float-left width-px-160 text-align-left ">Phone Number</p>
+            <input type="tel" name="phonenumber" class="rounded" placeholder="(###) ### - ####">
+            <br>
+            <hr>
+            <p class="float-left width-px-160 text-align-left "> Email Address </p>
+            <input type="email" name="emailaddress" class="rounded" placeholder="example@gmail.com">
+            <br>
+            <hr>
+            <div class="text-pt-14">What is your inquiry?</div>
+            <br>
+            <textarea name="message" class ="width-100 resize-none rounded" cols="30" rows="10"></textarea>
+            <hr>
+            <button type="reset" class="rounded text-light-normal">Clear</button>
+            <button type="button" class="rounded text-light-normal" onclick="submit_main_form()">Submit</button>
+        </form>
+        <br>
+        <div class="text-italic-light">Immediate(30min) Response Between 7:00am - 4:15pm Sun-Thu</div>
+        <p></p>
+    </div>
+    <div class="cont-trans-h3"></div>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
